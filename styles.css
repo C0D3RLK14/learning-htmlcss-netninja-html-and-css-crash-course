@@ -1,0 +1,7 @@
+/* Position & Layout
+   Position => Static(default), 
+               relative -> positions relative to its original position,
+               fixed -> positions relative to the view port(won't even when scrolled), 
+               absolute -> positions absolutely relative to the closest parent, which has position property applied as well(not Static), 
+               sticky -> mixture of static and fixed
+               */
