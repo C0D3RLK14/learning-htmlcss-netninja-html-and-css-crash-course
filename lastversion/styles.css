@@ -1,0 +1,93 @@
+/* This is an element selector
+this applies the styles to all 'p' tags
+p{
+    color:aquamarine
+} */
+
+/* This is a class selector 
+this applies the style to all elments with the class value of 'error'
+.error{
+    color:red;
+} */
+
+/* This selects only the 'p' tags with the class 'error' in them */
+p.error{
+    color: red;
+}
+
+p.success{
+    color:green;
+}
+
+/* This selects 'p' tags with both the classes 'success' and 'feedback' in them */
+p.success.feedback{
+    font-weight: 600;
+    border: 1px dashed green;
+}
+
+/* This is an id selector */
+#content{
+    background-color: seashell;
+    padding: 20px;
+}
+
+/* This selects only the div element with the id 'content'
+div#content {
+    background-color: seashell;
+    padding: 20px;
+} */
+
+/* This is a decendant selector.
+The below example selects a 'p' element in a 'div' element */
+div p{
+    color: darkmagenta;
+}
+
+/* This is an attribute selector. This selects 'a' tags with the attributes 'href'(I mean this selects
+all of the 'a' tags but used this as an example
+a[href]{
+    background-color: green;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+} */
+
+/* This selects an elment with a specific value for an attribute.
+Here "https://www.thenetninja.co.uk" value for the attribute 'href' in an 'a' tag
+a[href="https://www.netninja.co.uk"] {
+    background-color: green;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+} */
+
+/* This selects an elment with a specific value in the value of an attribute.
+Here "netninja" value is searched in the 'href' value "https://www.thenetninja.co.uk" of the attribute 'href' in an 'a' tag
+This also can be used to shorten the href value searched for(instead of the entire url in the href value. */
+a[href*="netninja"]{
+    background-color: green;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* This selects an element with 'href' that ends with ".com" 
+Could be specially usefull in adding the pdf icon to a link to download a pdf file */
+a[href$=".com"] {
+    background-color: darkkhaki;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: lowercase;
+}
+
+/* The cascade (Waterfall => top to bottom)
+    Inheritance (Parents to child), and Specificity
+    Inheritance
+    -----------
+    ** Here the styling of the parent elements are inherited by the children (not all though). Styles like
+       border, margin, padding and background are not inherited. Text formating and other similar styles are inherited */
+

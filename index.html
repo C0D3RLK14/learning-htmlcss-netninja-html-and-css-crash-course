@@ -5,11 +5,12 @@
 </head>
 <body>
     
-    <div>
+    <!-- The following element has a id of 'content' this used to identify this div element on this webpage and this 'content' id value cannot be used by any other element in this webpage -->
+    <div id="content">
 
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad animi a mollitia consectetur, ex officia non explicabo est iusto veniam numquam enim delectus quis magnam, alias dicta aperiam. Porro odio eius, quaerat temporibus sequi aliquam molestiae! Ratione aut possimus quo reprehenderit odit mollitia quis cum nobis adipisci similique atque incidunt alias, doloremque deleniti provident architecto natus autem error iusto magnam. Amet sit repellat modi cupiditate incidunt a, aspernatur quaerat? Laborum natus quae et error hic, accusamus excepturi praesentium impedit mollitia ut quam debitis deleniti sit, laudantium nemo ex eius labore dignissimos omnis voluptatibus veritatis explicabo veniam incidunt nulla! Neque, dolore?</p>
 
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad animi a mollitia consectetur, ex officia non explicabo
+        <p class="error">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad animi a mollitia consectetur, ex officia non explicabo
             est iusto veniam numquam enim delectus quis magnam, alias dicta aperiam. Porro odio eius, quaerat temporibus sequi
             aliquam molestiae! Ratione aut possimus quo reprehenderit odit mollitia quis cum nobis adipisci similique atque
             incidunt alias, doloremque deleniti provident architecto natus autem error iusto magnam. Amet sit repellat modi
@@ -17,7 +18,7 @@
             mollitia ut quam debitis deleniti sit, laudantium nemo ex eius labore dignissimos omnis voluptatibus veritatis
             explicabo veniam incidunt nulla! Neque, dolore?</p>
 
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad animi a mollitia consectetur, ex officia non explicabo
+        <p class="success">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad animi a mollitia consectetur, ex officia non explicabo
             est iusto veniam numquam enim delectus quis magnam, alias dicta aperiam. Porro odio eius, quaerat temporibus sequi
             aliquam molestiae! Ratione aut possimus quo reprehenderit odit mollitia quis cum nobis adipisci similique atque
             incidunt alias, doloremque deleniti provident architecto natus autem error iusto magnam. Amet sit repellat modi
@@ -25,7 +26,8 @@
             mollitia ut quam debitis deleniti sit, laudantium nemo ex eius labore dignissimos omnis voluptatibus veritatis
             explicabo veniam incidunt nulla! Neque, dolore?</p>
 
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad animi a mollitia consectetur, ex officia non explicabo
+        <!-- An element can have many class names and how is demonstrated below -->
+        <p class="success feedback">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad animi a mollitia consectetur, ex officia non explicabo
             est iusto veniam numquam enim delectus quis magnam, alias dicta aperiam. Porro odio eius, quaerat temporibus sequi
             aliquam molestiae! Ratione aut possimus quo reprehenderit odit mollitia quis cum nobis adipisci similique atque
             incidunt alias, doloremque deleniti provident architecto natus autem error iusto magnam. Amet sit repellat modi
@@ -34,6 +36,13 @@
             explicabo veniam incidunt nulla! Neque, dolore?</p>
 
     </div>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos assumenda nobis eum, debitis possimus architecto fugit molestias enim blanditiis, deleniti, dolore error consectetur velit similique vel ut? Tenetur eaque quisquam itaque, necessitatibus distinctio quod nostrum quidem beatae eligendi. Ab accusantium amet harum explicabo facilis dolor mollitia ipsam consequatur sint. Voluptatum, ad et quisquam ipsum velit harum quis. Deleniti ipsum sunt exercitationem maxime laboriosam natus impedit, placeat nesciunt illum nemo! Libero, non deleniti repellendus excepturi ea vero similique vel atque quidem, odit dicta. Dolorum sit minima laboriosam voluptate dicta earum corporis soluta consequuntur eaque quia? Voluptates assumenda cumque id aut perspiciatis?</p>
+
+    <!-- Technically two elements on the same webpage can have the same id and the styles would work as expected(worked for the current example, also don't know how
+    this would behave in javascript or the backend). But this not advised as this defeats the purpose of having an id -->
+    <!-- <div class="error" id="content">This is an error.</div> -->
+    <div class="error">This is an error.</div>
 
     <a href="https://www.netninja.co.uk">the best site on the web</a>
     <a href="https://www.google.com">google website</a>

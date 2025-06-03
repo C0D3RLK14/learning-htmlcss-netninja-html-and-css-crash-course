@@ -1,0 +1,36 @@
+/* The cascade (Waterfall => top to bottom)
+    Inheritance (Parents to child), and Specificity
+    Inheritance
+    -----------
+    ** Here the styling of the parent elements are inherited by the children (not all though). Styles like
+       border, margin, padding and background are not inherited. Text formating and other similar styles are inherited */
+
+/* Here we could clearly see inheritance at work,
+   color, font-weight styles are inherited by the 'p' elements inside the 'div' elements as 'p's are children elements of 'div' element */
+div{
+    color: lightcoral;
+    border: 1px solid lightgray;
+    margin: 40px;
+    font-weight: bold;
+}
+
+/* Also as the styles border and margin are not inherited by default we could overright it as follows 
+   And NOTE: that the color is now blueviolet which has overrided the inheritance of the color, this is due to specificity
+   Simply put the 'p' selector is more specific than 'div' element selector to style 'p' elements. */
+p{
+    margin: inherit;
+    border: inherit;
+    color: blueviolet;
+}
+
+/* Although the below 'p' selector is the most recent selector. This 'div p' selector has more priority, this is more specific */
+div p{
+    color: darkcyan;
+}
+
+/* Here as the most recent\latest(below on the page) 'p' element selector is the one it is more specific than the one above
+   Therefore the color is dark blue now */
+p{
+    color:darkblue;
+}
+
