@@ -1,7 +1,166 @@
+/* Resetting default CSS rules */
+body, ul, li, h1, h2, a{
+    margin: 0;
+    padding: 0;
+    font-family: arial;
+}
+
 /* Position & Layout
    Position => Static(default), 
                relative -> positions relative to its original position,
                fixed -> positions relative to the view port(won't even when scrolled), 
                absolute -> positions absolutely relative to the closest parent, which has position property applied as well(not Static), 
-               sticky -> mixture of static and fixed
-               */
+               sticky -> mixture of static and fixed (starts statics and becomes fixed when scrolled */
+
+/* Static & Relative positioning */
+/* header{
+    /* position: static;
+    top: 100px;
+    left: 120px; DOES NOT WORK */ 
+
+    /* Relative positioning could be used to position elements while the space it had before in the document is still preserved (whitespace) */
+    /* position: relative;
+    top: 100px;
+    left: 120px; 
+} */
+
+/* Absolute positioning - This is used for positioning child elements absolutely in a parent element */
+/* 1. Give the parent element a position value other than 'static' */
+section.banner{
+    position: relative;
+}
+
+section.banner img{
+    /* width: 100%; */
+    max-width: 100%; /* So here the image takes a 100% of the containing elements width and the browser window size shrinks the image does not overflow,
+    where in the just 'width' property it might overflow */
+}
+
+/* 2. Position the child element as desired */
+section.banner .welcome{
+    position: absolute; /* NOTE: That when the element is given the 'absolute' position value it loses its position on the document as opposite
+    to the 'relative' position behaviour */
+    top: 30%;
+    background-color: #feb614;
+    color: #fff;
+    font-size: 68px;
+    padding: 40px;
+}
+
+section.banner .welcome span{
+    font-size: 1.3em; /* This give the font size 1.3x of the font size inherited from the parent element */
+    font-weight: bold;
+}
+
+/* Fixed positioning */
+header{
+    position: fixed;
+    width: 100%; /* For some reason after giving the position value 'fixed' the element width became small */
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #f63232;
+    color: #fff;
+    text-align: center;
+}
+
+header h1{
+    border: 5px solid #fff;
+    border-radius: 36px;
+    font-weight: bold;
+    display: inline-block; /* To get a border around just the content */
+    padding: 12px 20px;
+    margin: 20px auto;
+}
+
+/* Sticky positioning */
+nav{
+    background-color: #f4f4f4;
+    padding: 20px;
+    position: sticky; /* This alone doesn't do any thing we need to give 'top' value as below */
+    top: 111px; /* When we scroll and the nav element gets to 111px from the top it sticks to a fixed position */
+}
+
+nav ul{
+    white-space: nowrap; /* Fixes the last element being under the first element due to some how lack of width */
+    max-width: 1200px;
+    margin: 0 auto; /* centers the ul, requires a width property */
+}
+
+nav li{
+    list-style: none;
+    display: inline-block; /* Width doesn't apply for inline or block elements */
+    width: 25%;
+}
+
+nav li a{ /********************************************************************************************
+           ***ALERT: Somehow applying the below styles to 'nav li' didn't work need to investigate ****
+           ********************************************************************************************/
+    text-decoration: none;
+    color: #484848;
+}
+
+nav li a.join{
+    color: #f63232;
+}
+
+main{
+    max-width: 100%;
+    width: 1200px; /* Here the max-width stops the overflowing factor as mention before and the width allows to set a fixed width for displays wider than 1200px */
+    margin: 80px auto;
+    padding: 20px 40px;
+    box-sizing: border-box; /* Although the max-width property is given. Due to the padding being added after the fact of the width makes the content overflow. There is property 'box-sizing: border-box' is given this ensures the padding stays inside */
+}
+
+article h2{
+    color: #f63232;
+    font-size: 48px;
+}
+
+article p{
+    line-height: 1.4em;
+    color: #4b4b4b;
+}
+
+.images{
+    text-align: center;
+    margin: 80px 0;
+    white-space: nowrap;
+}
+
+.images li{
+    display: inline-block;
+    width: 40%;
+    margin: 20px 5%;
+}
+
+.images li img{
+    max-width: 100%;
+}
+
+section.join{
+    text-align: center;
+    background-color: #f4f4f4;
+    color: #4b4b4b;
+    padding: 60px 120px; /* top&bottom left&right */
+}
+
+section.join h2{
+    font-size: 36px;
+}
+
+form input{
+    font-size: 24px;
+    color: #f4f4f4;
+    margin: 14px;
+    padding: 10px 20px;
+    border: 1px solid #fff;
+    border-radius: 28px;
+}
+
+footer{
+    background-color: #f63232;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
