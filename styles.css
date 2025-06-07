@@ -190,4 +190,10 @@ form input:valid {
 **      border: 5px solid #fff;
 **  }
 */
-        
+     
+/* Pseudo Elements => allows us to insert dynamic content to elements */
+article p::first-letter{
+    font-weight: bold;
+    font-size: 1.3em;
+    color: #f63232;
+}
