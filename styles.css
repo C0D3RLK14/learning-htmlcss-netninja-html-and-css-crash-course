@@ -85,6 +85,7 @@ nav ul{
     white-space: nowrap; /* Fixes the last element being under the first element due to some how lack of width */
     max-width: 1200px;
     margin: 0 auto; /* centers the ul, requires a width property */
+    text-align: center;
 }
 
 nav li{
@@ -152,11 +153,12 @@ section.join h2{
 form input{
     font-size: 24px;
     color: #4b4b4b;
-    margin: 14px;
+    margin: 14px auto;
     padding: 10px 20px;
     border: 1px solid #fff;
     border-radius: 28px;
-    width: 260px;
+    width: 300px;
+    box-sizing: border-box;
 }
 
 footer{
@@ -196,4 +198,80 @@ article p::first-letter{
     font-weight: bold;
     font-size: 1.3em;
     color: #f63232;
+}
+
+body::selection {
+    background-color: #f63232;
+    color: #fff;
+}
+
+/* Responsive Design */
+/* Media Queries, Viewport meta tag, Responsive images makes responsive design */
+/* You should have a good approach when doing a responsive design: Mobile first approach is one approach */
+
+/* The following means for a device with a screen and if it has a display of width upto 1400px (devices with screen width <= 1400px) apply these css rules */
+
+/* NOTE: You could do the inverse using 'min-width' value */
+@media screen and (max-width: 1400px){
+    .banner .welcome h2{
+        font-size: 58px;
+    }
+}
+
+/* For screen widths upto 960px */
+@media screen and (max-width: 960px) {
+    .banner .welcome h2 {
+        font-size: 40px;
+    }
+}
+
+/* For screen widths upto 700px */
+@media screen and (max-width: 700px) {
+    .banner .welcome h2 {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    section.banner .welcome {
+        position: relative;
+        padding: 15px;
+    }
+
+    section.banner .welcome br{
+        display: none;
+    }
+
+    section.banner .welcome span{
+        font-size: 1em;
+    }
+
+    .images li{
+        display: block;
+        width: 100%;
+        margin: 20px auto;
+    }
+}
+
+/* For screen widths upto 560px */
+@media screen and (max-width: 560px){
+    header {
+        position: relative;
+    }
+
+    nav{
+        position: relative;
+        top: 0;
+    }
+
+    nav li{
+        display: block;
+        padding: 14px;
+        font-size: 20px;
+        width: 100%;
+    }
+
+    section.join form input{
+        font-size: 16px;
+        width: 216px;
+    }
 }
